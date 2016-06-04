@@ -1,0 +1,63 @@
+﻿@model IEnumerable<NewRepo.Models.checkcode>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.chkclass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkclasstitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkitem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bmodid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bmoddate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkclass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkclasstitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkitem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bmodid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bmoddate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cid })
+        </td>
+    </tr>
+}
+
+</table>

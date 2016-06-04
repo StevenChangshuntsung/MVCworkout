@@ -1,0 +1,66 @@
+﻿@model NewRepo.Models.checkcode
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>checkcode</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.chkclass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkclass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chkclasstitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkclasstitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chkcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chkitem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkitem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bmodid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bmodid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bmoddate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bmoddate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
